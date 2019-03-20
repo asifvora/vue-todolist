@@ -10,7 +10,6 @@
 <script>
 export default {
   name: "TodoItem",
-  components: {},
   props: ["todo"]
 };
 </script>

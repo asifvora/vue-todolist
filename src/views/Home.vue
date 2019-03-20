@@ -35,10 +35,11 @@ export default {
         .then(res => {
           this.todos = [...this.todos, res];
           this.isLoading = false;
-           this.$refs.form.resetForm(); 
+          this.$refs.form.resetForm();
         })
         .catch(err => (this.isLoading = false));
     },
+
     deleteTodo(id) {
       this.isLoading = true;
       Todo.deleteTodo(id)
@@ -50,7 +51,7 @@ export default {
     }
   },
 
-  created() {
+  mounted() {
     this.isLoading = true;
     Todo.getTodos(5)
       .then(res => {

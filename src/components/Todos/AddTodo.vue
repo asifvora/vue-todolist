@@ -40,6 +40,7 @@ export default {
       // Send up to parent
       this.$emit("add-todo", newTodo);
     },
+    
     resetForm() {
       this.form.title = null;
       this.$v.form.$reset();

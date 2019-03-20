@@ -1,6 +1,6 @@
 'use strict';
 
-const baseUrl = 'https://jsonplaceholder.typicode.com/';
+const baseUrl = process.env.VUE_APP_BASE_URL;
 
 const request = {
     get: (url) => {
@@ -14,6 +14,7 @@ const request = {
                 return err;
             });
     },
+
     post: (url, data) => {
         return fetch(`${baseUrl}${url}`, {
             method: 'POST',
@@ -31,6 +32,7 @@ const request = {
             return err;
         });
     },
+
     put: (url, data) => {
         return fetch(`${baseUrl}${url}`, {
             method: 'PUT',
@@ -48,6 +50,7 @@ const request = {
             return err;
         });
     },
+    
     delete: (url) => {
         return fetch(`${baseUrl}${url}`, {
             method: 'delete'
