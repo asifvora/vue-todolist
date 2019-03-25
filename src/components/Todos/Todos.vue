@@ -18,8 +18,7 @@ export default {
   props: {
     todos: {
       type: Array,
-      required: true,
-      default: []
+      required: true
     }
   }
 };

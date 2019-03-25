@@ -6,6 +6,7 @@
         type="text"
         v-model="form.title"
         placeholder="Add Todo..."
+        v-focus
       >
       <input type="submit" value="Submit" class="btn" :disabled="$v.form.$error">
     </form>
@@ -40,7 +41,7 @@ export default {
       // Send up to parent
       this.$emit("add-todo", newTodo);
     },
-    
+
     resetForm() {
       this.form.title = null;
       this.$v.form.$reset();
