@@ -10,7 +10,6 @@ const request = {
             }).then((resp) => {
                 return resp
             }).catch((err) => {
-                console.log('err :: ', err);
                 return err;
             });
     },
@@ -28,7 +27,6 @@ const request = {
         }).then((resp) => {
             return resp
         }).catch((err) => {
-            console.log('err :: ', err);
             return err;
         });
     },
@@ -46,7 +44,6 @@ const request = {
         }).then((resp) => {
             return resp
         }).catch((err) => {
-            console.log('err :: ', err);
             return err;
         });
     },
@@ -59,7 +56,6 @@ const request = {
         }).then((resp) => {
             return resp
         }).catch((err) => {
-            console.log('err :: ', err);
             return err;
         });
     }

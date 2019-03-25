@@ -37,17 +37,17 @@ export default {
           this.isLoading = false;
           this.$refs.form.resetForm();
         })
-        .catch(err => (this.isLoading = false));
+        .catch(() => (this.isLoading = false));
     },
 
     deleteTodo(id) {
       this.isLoading = true;
       Todo.deleteTodo(id)
-        .then(res => {
+        .then(() => {
           this.todos = this.todos.filter(todo => todo.id !== id);
           this.isLoading = false;
         })
-        .catch(err => (this.isLoading = false));
+        .catch(() => (this.isLoading = false));
     }
   },
 
@@ -58,7 +58,7 @@ export default {
         this.todos = res ? res : [];
         this.isLoading = false;
       })
-      .catch(err => (this.isLoading = false));
+      .catch(() => (this.isLoading = false));
   }
 };
 </script>
