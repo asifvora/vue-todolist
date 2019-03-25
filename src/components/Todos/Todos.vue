@@ -15,7 +15,13 @@ export default {
   components: {
     TodoItem
   },
-  props: ["todos"]
+  props: {
+    todos: {
+      type: Array,
+      required: true,
+      default: []
+    }
+  }
 };
 </script>
 

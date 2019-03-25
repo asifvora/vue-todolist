@@ -1,8 +1,11 @@
 <template>
   <div class="todo-item">
     <p>
-      {{todo.title}}
-      <button @click="$emit('delete-todo', todo.id)" class="del">x</button>
+      {{todo.title | capitalize | readMore(50, '...')}}
+      <button
+        @click="$emit('delete-todo', todo.id)"
+        class="del"
+      >x</button>
     </p>
   </div>
 </template>
@@ -10,7 +13,12 @@
 <script>
 export default {
   name: "TodoItem",
-  props: ["todo"]
+  props: {
+    todo: {
+      type: Object,
+      required: true
+    }
+  }
 };
 </script>
 
